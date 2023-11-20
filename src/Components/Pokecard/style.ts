@@ -14,12 +14,23 @@ export const Container = styled.div`
 
 export const ImgContainer = styled.div`
   background-color: white;
-  height: 200px;
+  height: 280px;
   width: 280px;
   border-radius: 14px;
 `;
 
 export const TextContainer = styled.div`
+  padding: 10px;
   height: 250px;
   width: 280px;
+`;
+
+export const Title = styled.h1`
+  font-size: 35px;
+  font-family: sans-serif;
+`;
+
+export const Type = styled.p`
+  font-size: 24px;
+  font-family: sans-serif;
 `;

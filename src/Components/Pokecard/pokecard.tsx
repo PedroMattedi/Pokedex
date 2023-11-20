@@ -1,15 +1,18 @@
 import * as S from "./style";
 
 interface PokecardProps {
+  name: string;
   type?: string;
-  evolution?: number;
 }
 
-export const Pokecard: React.FC<PokecardProps> = () => {
+export const Pokecard: React.FC<PokecardProps> = ({ name, type }) => {
   return (
     <S.Container>
       <S.ImgContainer></S.ImgContainer>
-      <S.TextContainer></S.TextContainer>
+      <S.TextContainer>
+        <S.Title>{name}</S.Title>
+        <S.Type>{type}</S.Type>
+      </S.TextContainer>
     </S.Container>
   );
 };
