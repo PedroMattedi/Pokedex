@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: red;
-  max-height: 450px;
-  max-width: 300px;
+  background-color: yellow;
+  color: #213547;
+  max-height: 300px;
+  max-width: 350px;
   border-radius: 14px;
   display: flex;
   justify-content: center;
@@ -17,6 +18,9 @@ export const ImgContainer = styled.div`
   height: 280px;
   width: 280px;
   border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const TextContainer = styled.div`
@@ -33,4 +37,9 @@ export const Title = styled.h1`
 export const Type = styled.p`
   font-size: 24px;
   font-family: sans-serif;
+`;
+
+export const Picture = styled.img`
+  height: 150px;
+  width: 150px;
 `;

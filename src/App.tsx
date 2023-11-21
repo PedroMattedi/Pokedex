@@ -10,7 +10,7 @@ interface PokemonProps {
 function App() {
   const [pokemonList, setPokemonList] = useState<PokemonProps[]>();
 
-  const apiUrl = " https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
+  const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
   const loadData = useCallback(async () => {
     try {
@@ -28,13 +28,17 @@ function App() {
   return (
     <S.Container>
       <S.Header>
-        <S.Title>
-          Pokedéx Básica - 20 pokémons só para demonstrar consumo de API
-        </S.Title>
+        <S.Title>Pokedéx Básica</S.Title>
       </S.Header>
       <S.Content>
-        {pokemonList?.map((item) => (
-          <Pokecard key={item.name} name={item.name.toUpperCase()}></Pokecard>
+        {pokemonList?.map((item, index) => (
+          <Pokecard
+            key={item.name}
+            name={item.name.toUpperCase()}
+            imgUrl={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
+              index + 1
+            }.svg`}
+          ></Pokecard>
         ))}
       </S.Content>
     </S.Container>
