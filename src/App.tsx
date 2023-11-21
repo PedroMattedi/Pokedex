@@ -5,13 +5,12 @@ import axios from "axios";
 
 interface PokemonProps {
   name: string;
-  // type: "fire" | "grass" | "water" | "normal" | "flying" | "bug";
 }
 
 function App() {
   const [pokemonList, setPokemonList] = useState<PokemonProps[]>();
 
-  const apiUrl = "https://pokeapi.co/api/v2/pokemon";
+  const apiUrl = " https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
   const loadData = useCallback(async () => {
     try {
@@ -35,11 +34,7 @@ function App() {
       </S.Header>
       <S.Content>
         {pokemonList?.map((item) => (
-          <Pokecard
-            key={item.name}
-            name={item.name.toUpperCase()}
-            // type={type}
-          ></Pokecard>
+          <Pokecard key={item.name} name={item.name.toUpperCase()}></Pokecard>
         ))}
       </S.Content>
     </S.Container>
