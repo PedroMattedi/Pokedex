@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   margin: 20px;
   padding: 20px;
 `;
@@ -24,8 +25,12 @@ export const ImgContainer = styled.div`
 
 export const TextContainer = styled.div`
   padding: 10px;
-  height: 250px;
+  height: 100px;
   width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Title = styled.h1`
@@ -39,6 +44,18 @@ export const Type = styled.p`
 `;
 
 export const Picture = styled.img`
+  transition: transform 0.5s ease;
+  transform: rotate(${(props) => props.rotation}deg);
   height: 150px;
   width: 150px;
+`;
+
+export const BackflipButton = styled.button<{ rotation: number }>`
+  height: 100px;
+  width: 200px;
+  border-radius: 14px;
+  color: #213547;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 1px solid;
 `;
