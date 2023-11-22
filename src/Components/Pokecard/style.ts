@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: yellow;
   color: #213547;
   max-height: 300px;
   max-width: 350px;
@@ -17,7 +16,7 @@ export const ImgContainer = styled.div`
   background-color: white;
   height: 280px;
   width: 280px;
-  border-radius: 14px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
