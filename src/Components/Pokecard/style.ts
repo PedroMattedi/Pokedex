@@ -43,14 +43,14 @@ export const Type = styled.p`
   font-family: sans-serif;
 `;
 
-export const Picture = styled.img`
+export const Picture = styled.img<{ rotation: number }>`
   transition: transform 0.5s ease;
   transform: rotate(${(props) => props.rotation}deg);
   height: 150px;
   width: 150px;
 `;
 
-export const BackflipButton = styled.button<{ rotation: number }>`
+export const BackflipButton = styled.button`
   height: 100px;
   width: 200px;
   border-radius: 14px;
